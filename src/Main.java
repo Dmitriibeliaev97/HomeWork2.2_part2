@@ -1,6 +1,7 @@
 public class Main {
 
         public static void main(String[] args) {
+
             Car car = new Car();
             Car car2 = new Car();
             car.setModelName("car1");
@@ -23,16 +24,16 @@ public class Main {
             bicycle2.setWheelsCount(2);
 
             ServiceStation station = new ServiceStation();
-            station.check(car, null, null);
+            car.check(car);
             System.out.println();
-            station.check(car2, null, null);
+            car.check(car2);
             System.out.println();
-            station.check(null, bicycle, null);
+            bicycle.check(bicycle);
             System.out.println();
-            station.check(null, bicycle2, null);
+            bicycle.check(bicycle2);
             System.out.println();
-            station.check(null, null, truck);
+            truck.check(truck);
             System.out.println();
-            station.check(null, null, truck2);
+            truck.check(truck2);
         }
     }

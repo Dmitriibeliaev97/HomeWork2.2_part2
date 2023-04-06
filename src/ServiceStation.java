@@ -1,4 +1,5 @@
-public class ServiceStation {
+public class ServiceStation implements ServiceStationForTransport {
+    @Override
     public void check(Car car, Bicycle bicycle, Truck truck) {
         if (car != null) {
             System.out.println("Обслуживаем " + car.getModelName());
@@ -15,9 +16,9 @@ public class ServiceStation {
             truck.checkTrailer();
         } else if (bicycle != null) {
             System.out.println("Обслуживаем " + bicycle.getModelName());
-            for (int i = 0; i < bicycle.getWheelsCount(); i++) {
+           for (int i = 0; i < bicycle.getWheelsCount(); i++) {
                 UpdateTyre.updateTyre();
-            }
-        }
-    }
+           }
+      }
+   }
 }

@@ -1,6 +1,4 @@
-public class Truck {
-    private String modelName;
-    private int wheelsCount;
+public class Truck extends Transport{
 
     public void checkTrailer() {
         System.out.println("Проверяем прицеп");
@@ -20,5 +18,25 @@ public class Truck {
 
     public void setWheelsCount(int wheelsCount) {
         this.wheelsCount = wheelsCount;
+    }
+
+    @Override
+    public void check(Car car) {
+
+    }
+
+    @Override
+    public void check(Bicycle bicycle) {
+
+    }
+
+    @Override
+    public void check(Truck truck) {
+        System.out.println("Обслуживаем " + truck.getModelName());
+        for (int i = 0; i < truck.getWheelsCount(); i++) {
+            UpdateTyre.updateTyre();
+        }
+        UpdateTyre.checkEngine();
+        truck.checkTrailer();
     }
 }
