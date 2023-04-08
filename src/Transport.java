@@ -1,10 +1,31 @@
 abstract public class Transport {
-    protected  String modelName;
-    protected int wheelsCount;
+    private   String modelName;
+    private int wheelsCount;
 
-    public abstract void check(Car car);
+    public static void updateTyre() { System.out.println("Меняем покрышку");
 
-    public abstract void check(Bicycle bicycle);
+    }
 
-    public abstract void check(Truck truck);
+    static void checkEngine() {
+        System.out.println("Проверяем двигатель");
+    }
+
+
+    public String getModelName() {
+        return modelName;
+    }
+
+    public void setModelName(String modelName) {
+        this.modelName = modelName;
+    }
+
+    public int getWheelsCount() {
+        return wheelsCount;
+    }
+
+    public void setWheelsCount(int wheelsCount) {
+        this.wheelsCount = wheelsCount;
+    }
+
+    public abstract void check();
 }
