@@ -22,10 +22,6 @@ public abstract class Transport implements ServiceStationForTransport {
 
     }
 
-    static void checkEngine() {
-        System.out.println("Проверяем двигатель");
-    }
-
     @Override
     public void check() {
         System.out.println("Обслуживаем " + modelName);

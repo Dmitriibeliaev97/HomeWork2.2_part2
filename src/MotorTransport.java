@@ -3,7 +3,7 @@ public abstract class MotorTransport extends Transport {
         super(modelName, wheelsCount);
     }
 
-    public static void checkEngine() {
+    public void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
 
